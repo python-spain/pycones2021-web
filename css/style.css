@@ -2999,13 +2999,13 @@ a.ui-button:active, .ui-button:active,
 	width: 100%;
 	text-align: center;
 }
-
+/*TODO*/
 .about-section-two .content-box .text{
 	position: relative;
 	display: block;
 	font-size: 15px;
 	line-height: 26px;
-	color: #848484;
+	color: #ffffff;
 	font-weight: 400;
 }
 
@@ -3100,7 +3100,8 @@ a.ui-button:active, .ui-button:active,
 	padding-bottom: 0;
 }
 
-.about-section-two.style-two:after{
+/*TODO
+/* .about-section-two.style-two:after{
 	position: absolute;
 	left: 0;
 	bottom: 0;
@@ -3108,7 +3109,7 @@ a.ui-button:active, .ui-button:active,
 	width: 100%;
 	background-color: #ffffff;
 	content: "";
-}
+} */
 
 .about-section-two.style-two:before{
 	display: none;
