@@ -3013,14 +3013,15 @@ a.ui-button:active, .ui-button:active,
 	font-weight: 400;
 	text-align: left;
 	padding: 20px;
-  background: rgba(0,0,0,0.1);
+  background: rgb(110 48 170 / 60%);
   border-radius: 10px;
 }
 
 .about-section-two .content-box .btn-box{
 	position: relative;
 	display: block;
-	margin-top: 40px;
+    margin-top: 40px;
+    padding-bottom: 40px;
 }
 
 .about-section-two .content-box .btn-box a{
@@ -9954,4 +9955,8 @@ a.ui-button:active, .ui-button:active,
 
 .login-form .psw:hover{
 	text-decoration: underline;
+}
+
+.about-section-two .text a{
+    color: #f14b59;
 }
