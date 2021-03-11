@@ -193,11 +193,11 @@ p{
 	overflow: hidden;
 }
 
-ul,li{
+/*ul,li{
 	list-style:none;
 	padding:0px;
 	margin:0px;	
-}
+}*/
 
 img{
 	display:inline-block;
