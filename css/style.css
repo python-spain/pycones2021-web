@@ -199,6 +199,10 @@ p{
 	margin:0px;	
 }*/
 
+ul.value-points {
+	padding-left: 40px;
+}
+
 img{
 	display:inline-block;
 	max-width:100%;
@@ -3007,6 +3011,10 @@ a.ui-button:active, .ui-button:active,
 	line-height: 26px;
 	color: #ffffff;
 	font-weight: 400;
+	text-align: left;
+	padding: 20px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 10px;
 }
 
 .about-section-two .content-box .btn-box{
