@@ -193,10 +193,14 @@ p{
 	overflow: hidden;
 }
 
-ul,li{
+/*ul,li{
 	list-style:none;
 	padding:0px;
 	margin:0px;	
+}*/
+
+ul.valuable-points {
+	padding-left: 40px;
 }
 
 img{
@@ -3007,6 +3011,10 @@ a.ui-button:active, .ui-button:active,
 	line-height: 26px;
 	color: #ffffff;
 	font-weight: 400;
+	text-align: left;
+	padding: 20px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 10px;
 }
 
 .about-section-two .content-box .btn-box{
