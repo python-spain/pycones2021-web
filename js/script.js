@@ -33,7 +33,10 @@
 	if($('.main-header li.dropdown ul').length){
 		$('.main-header .navigation li.dropdown').append('<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div>');
 		
-	}
+    }
+    function closeMobileMenu() {
+        $('body').removeClass('mobile-menu-visible');
+    }
 
 	//Mobile Nav Hide Show
 	if($('.mobile-menu').length){
@@ -42,9 +45,8 @@
 		$('.mobile-menu').append('<div class="close-btn"><span class="icon flaticon-cancel-music"></span></div>');
 		$('.mobile-menu .navigation').append(mobileMenuContent);
 		$('.sticky-header .navigation').append(mobileMenuContent);
-		$('.mobile-menu .close-btn').on('click', function() {
-			$('body').removeClass('mobile-menu-visible');
-		});
+		$('.mobile-menu .close-btn').on('click', closeMobileMenu);
+        $('.mobile-menu .navigation a').on('click', closeMobileMenu)
 		//Dropdown Button
 		$('.mobile-menu li.dropdown .dropdown-btn').on('click', function() {
 			$(this).prev('ul').slideToggle(500);
