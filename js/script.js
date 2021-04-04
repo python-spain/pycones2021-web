@@ -27,8 +27,12 @@
 	}
 	
 	headerStyle();
-	
-	
+
+	$('.main-menu .navigation > li').on('click', function(e){
+		$('.main-menu .navigation > li.current').removeClass('current');
+		e.currentTarget.classList.add('current');
+	})
+
 	//Submenu Dropdown Toggle
 	if($('.main-header li.dropdown ul').length){
 		$('.main-header .navigation li.dropdown').append('<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div>');
