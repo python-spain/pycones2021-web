@@ -7404,8 +7404,12 @@ a.ui-button:active, .ui-button:active,
 
 .main-footer .footer-content{
 	position: relative;
-	padding: 100px 0 100px;
+	padding: 150px 0 100px;
 	text-align: center;
+}
+
+.main-footer .footer-content img{
+	width: 250px;
 }
 
 .main-footer .footer-logo{
@@ -7415,7 +7419,7 @@ a.ui-button:active, .ui-button:active,
 
 .main-footer .social-links{
 	position: relative;
-	margin-bottom: 75px;
+	margin: 90px 350px 90px;
 }
 
 .main-footer .social-links .text-box{
@@ -7429,7 +7433,7 @@ a.ui-button:active, .ui-button:active,
 	line-height: 1em;
 	color: #ffffff;
 	font-weight: 400;
-	margin-bottom: 15px;
+	padding-top: 50px;
 }
 
 .main-footer .social-links .text{
@@ -7445,14 +7449,13 @@ a.ui-button:active, .ui-button:active,
 
 .main-footer .social-links{
 	position: relative;
+	background-color: rgba(255,255,255,.05);
 }
 
 .main-footer .social-links ul{
 	position: relative;
 	display: inline-block;
-	padding: 48px 50px 30px;
-	background-color: rgba(255,255,255,.05);
-	margin-top: 80px;
+	padding: 30px 50px 30px;
 }
 
 .social-icon-colored{
