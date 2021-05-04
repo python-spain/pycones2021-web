@@ -3019,7 +3019,7 @@ a.ui-button:active, .ui-button:active,
 
 .about-section-two .content-box .btn-box{
 	position: relative;
-	display: block;
+	display: inline-block;
     margin-top: 40px;
     padding-bottom: 40px;
 }
