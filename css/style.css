@@ -4954,33 +4954,16 @@ a.ui-button:active, .ui-button:active,
 	bottom: -10px;
 }
 
-.clients-section .platinum-carousel{
+.clients-section .gold-carousel{
 	position: relative;
 	padding: 45px 0;
 }
 
-.clients-section .platinum-sponsors{
+.clients-section .gold-sponsors{
 	position: relative;
 	border-bottom: 2px dashed rgba(240,197,46,.40);
 	text-align: center;
 	margin-bottom: 60px;
-}
-
-.clients-section .platinum-sponsors h4{
-	position: relative;
-	display: block;
-	font-size: 28px;
-	line-height: 26px;
-	color: #f14b59;
-	font-weight: 400;
-}
-
-.clients-section .gold-sponsors{
-	position: relative;
-	max-width: 890px;
-	margin: 0 auto;
-	text-align: center;
-	padding-bottom: 110px;
 }
 
 .clients-section .gold-sponsors h4{
@@ -4989,10 +4972,44 @@ a.ui-button:active, .ui-button:active,
 	font-size: 28px;
 	line-height: 26px;
 	color: #ffc600;
+	font-weight: 600;
+}
+
+.clients-section .silver-sponsors{
+	position: relative;
+	max-width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 110px;
+}
+
+.clients-section .silver-sponsors h4{
+	position: relative;
+	display: block;
+	font-size: 28px;
+	line-height: 26px;
+	color: #D3D3D3;
 	font-weight: 400;
 	margin-bottom: 35px;
 }
 
+.clients-section .bronze-sponsors{
+	position: relative;
+	max-width: 890px;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 110px;
+}
+
+.clients-section .bronze-sponsors h4{
+	position: relative;
+	display: block;
+	font-size: 28px;
+	line-height: 26px;
+	color: #cd7f32;
+	font-weight: 300;
+	margin-bottom: 35px;
+}
 .clients-section .sponsors-outer{
 	position: relative;
 }
