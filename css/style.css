@@ -5120,7 +5120,7 @@ a.ui-button:active, .ui-button:active,
 	display: none;
 }
 
-.clients-section.style-two .gold-sponsors{
+.clients-section.style-two .silver-sponsors{
 	padding-bottom: 90px;
 }
 
@@ -5135,14 +5135,13 @@ a.ui-button:active, .ui-button:active,
 	display: none;
 }
 
-.clients-section.style-three .platinum-sponsors{
+.clients-section.style-three .gold-sponsors{
 	margin-bottom: 80px;
 	padding-bottom: 35px;
 	border-bottom: 2px dashed rgba(240,197,46,.40);
 }
 
 .clients-section.style-three .sponsors-outer .image{
-	border: 2px solid #e0e0e0;
 	padding: 33px 20px;
 }
 
@@ -5158,7 +5157,7 @@ a.ui-button:active, .ui-button:active,
 	display: none;
 }
 
-.clients-section.style-four .platinum-carousel{
+.clients-section.style-four .gold-carousel{
 	padding: 100px 0;
 }
 
