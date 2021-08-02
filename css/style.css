@@ -4977,10 +4977,11 @@ a.ui-button:active, .ui-button:active,
 
 .clients-section .silver-sponsors{
 	position: relative;
+	border-bottom: 2px dashed rgba(240,197,46,.40);
 	max-width: 1200px;
 	margin: 0 auto;
 	text-align: center;
-	padding-bottom: 110px;
+	padding-bottom: 50px;
 }
 
 .clients-section .silver-sponsors h4{
@@ -5016,6 +5017,7 @@ a.ui-button:active, .ui-button:active,
 
 .clients-section .slide-item{
 	position: relative;
+	list-style: none;
 }
 
 .clients-section .sponsors-outer .image{
@@ -9990,4 +9992,30 @@ a.ui-button:active, .ui-button:active,
 
 .main-header .header-upper .logo-box .logo img{
   height: 80px
+}
+
+
+/* .owl-stage-outer {
+	display: flex;
+	justify-content: center;
+} */
+
+.gold-sponsors ul, .silver-sponsors ul, .bronze-sponsors ul {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.slide-item { 
+
+	margin-right: 30px;
+	flex-grow: 0;
+}
+
+.gold-sponsors .slide-item {
+	width: 400px;
+}
+
+.silver-sponsors .slide-item {
+	width: 300px;
 }
