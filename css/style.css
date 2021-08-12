@@ -10000,6 +10000,10 @@ a.ui-button:active, .ui-button:active,
 	justify-content: center;
 } */
 
+.sponsors-outer p {
+	text-align: center;
+}
+
 .gold-sponsors ul, .silver-sponsors ul, .bronze-sponsors ul {
 	display: flex;
 	justify-content: center;
@@ -10013,7 +10017,7 @@ a.ui-button:active, .ui-button:active,
 }
 
 .gold-sponsors .slide-item {
-	width: 400px;
+	width: 350px;
 }
 
 .silver-sponsors .slide-item {
