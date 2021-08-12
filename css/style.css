@@ -4982,6 +4982,7 @@ a.ui-button:active, .ui-button:active,
 	margin: 0 auto;
 	text-align: center;
 	padding-bottom: 50px;
+	margin-bottom: 80px;
 }
 
 .clients-section .silver-sponsors h4{
@@ -4999,7 +5000,7 @@ a.ui-button:active, .ui-button:active,
 	max-width: 890px;
 	margin: 0 auto;
 	text-align: center;
-	padding-bottom: 110px;
+	padding-bottom: 60px;
 }
 
 .clients-section .bronze-sponsors h4{
@@ -10011,7 +10012,6 @@ a.ui-button:active, .ui-button:active,
 }
 
 .slide-item { 
-
 	margin-right: 30px;
 	flex-grow: 0;
 }
@@ -10022,4 +10022,8 @@ a.ui-button:active, .ui-button:active,
 
 .silver-sponsors .slide-item {
 	width: 300px;
+}
+
+.bronze-sponsors .slide-item {
+	width: 200px;
 }
