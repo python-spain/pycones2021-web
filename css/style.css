@@ -4267,13 +4267,13 @@ a.ui-button:active, .ui-button:active,
 	float: left;
 	min-width: 215px;
 	background-color: #f14b59;
-	font-size: 20px;
+	font-size: 16px;
 	line-height: 30px;
 	color: #fffefe;
 	font-weight: 400;
 	text-transform: uppercase;
 	text-align: center;
-	padding: 22px 15px 28px;
+	padding: 15px;
 	cursor: pointer;
 	-webkit-transition: all 300ms ease;
 	-moz-transition: all 300ms ease;
@@ -4305,12 +4305,20 @@ a.ui-button:active, .ui-button:active,
 	content: "";
 }
 
+.shedule-tabs .tab-buttons li:nth-child(1){
+	background-color: #ffc600;
+}
+
 .shedule-tabs .tab-buttons li:nth-child(2){
 	background-color: #454ab4;
 }
 
 .shedule-tabs .tab-buttons li:nth-child(3){
-	background-color: #ffa200;
+	background-color: #454ab4;
+}
+
+.shedule-tabs .tab-buttons li:nth-child(1):before{
+	border-top: 8px solid #ffc600;
 }
 
 .shedule-tabs .tab-buttons li:nth-child(2):before{
@@ -4318,7 +4326,7 @@ a.ui-button:active, .ui-button:active,
 }
 
 .shedule-tabs .tab-buttons li:nth-child(3):before{
-	border-top: 8px solid #ffa200;
+	border-top: 8px solid #454ab4;
 }
 
 .shedule-tabs .tab-buttons li.active-btn{
@@ -8817,7 +8825,7 @@ a.ui-button:active, .ui-button:active,
 	position:relative;
 	display:block;
 	float:left;
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 30px;
 	color: #8a8d91;
 	font-weight: 500;
@@ -10011,7 +10019,7 @@ a.ui-button:active, .ui-button:active,
 	flex-wrap: wrap;
 }
 
-.slide-item { 
+.slide-item {
 	margin-right: 30px;
 	flex-grow: 0;
 }
