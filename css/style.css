@@ -4312,6 +4312,10 @@ a.ui-button:active, .ui-button:active,
 	background-color: rgba(69,74,180,0.3);
 }
 
+.shedule-tabs .tab-buttons li:nth-child(n):hover {
+	background-color: rgba(255, 198, 0, 0.8);
+}
+
 .shedule-tabs .tab-buttons li:nth-child(3){
 	background-color: rgba(69,74,180,0.3);
 }
