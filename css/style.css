@@ -4267,13 +4267,13 @@ a.ui-button:active, .ui-button:active,
 	float: left;
 	min-width: 215px;
 	background-color: #f14b59;
-	font-size: 20px;
+	font-size: 16px;
 	line-height: 30px;
 	color: #fffefe;
 	font-weight: 400;
 	text-transform: uppercase;
 	text-align: center;
-	padding: 22px 15px 28px;
+	padding: 15px;
 	cursor: pointer;
 	-webkit-transition: all 300ms ease;
 	-moz-transition: all 300ms ease;
@@ -4285,32 +4285,51 @@ a.ui-button:active, .ui-button:active,
 .shedule-tabs .tab-buttons li span{
 	position: relative;
 	display: block;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 20px;
-	color: #fffefe;
+	color: #5a5a5a;
 	font-weight: 400;
 	text-transform: capitalize;
-	opacity: .60;
 }
 
 .shedule-tabs .tab-buttons li:before{
 	position: absolute;
 	left: 50%;
-	margin-left: -8px;
+	margin-left: -40px;
 	bottom: -8px;
-	border-left: 8px solid transparent;
-	border-right: 8px solid transparent;
+	border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
 	opacity: 0;
-	border-top: 8px solid #f14b59;
+	border-top: 40px solid #f14b59;
 	content: "";
 }
 
+.shedule-tabs .tab-buttons li:nth-child(1){
+	background-color: rgba(47,155,114,0.3);
+}
+
 .shedule-tabs .tab-buttons li:nth-child(2){
-	background-color: #454ab4;
+	background-color: rgba(69,74,180,0.3);
+}
+
+.shedule-tabs .tab-buttons li:nth-child(n):hover {
+	background-color: rgba(255, 198, 0, 0.8);
 }
 
 .shedule-tabs .tab-buttons li:nth-child(3){
-	background-color: #ffa200;
+	background-color: rgba(69,74,180,0.3);
+}
+
+.shedule-tabs .tab-buttons li:nth-child(4){
+	background-color: rgba(241,75,89, 0.3);
+}
+
+.shedule-tabs .tab-buttons li:nth-child(5){
+	background-color: rgba(241,75,89, 0.3);
+}
+
+.shedule-tabs .tab-buttons li:nth-child(1):before{
+	border-top: 8px solid #2f9b72;
 }
 
 .shedule-tabs .tab-buttons li:nth-child(2):before{
@@ -4318,15 +4337,25 @@ a.ui-button:active, .ui-button:active,
 }
 
 .shedule-tabs .tab-buttons li:nth-child(3):before{
-	border-top: 8px solid #ffa200;
+	border-top: 8px solid #454ab4;
+}
+
+.shedule-tabs .tab-buttons li:nth-child(3):before{
+	border-top: 8px solid #f14b59;
+}
+
+.shedule-tabs .tab-buttons li:nth-child(4):before{
+	border-top: 8px solid #f14b59;
 }
 
 .shedule-tabs .tab-buttons li.active-btn{
-	box-shadow: 0 12px 40px rgba(8,18,109,.12);
+	background-color: #ffc600;
+	font-weight: bold;
 }
 
 .shedule-tabs .tab-buttons li.active-btn:before{
 	opacity: 1;
+	border-top: 8px solid #ffc600;
 }
 
 .shedule-block{
@@ -4348,11 +4377,6 @@ a.ui-button:active, .ui-button:active,
 	background: -webkit-linear-gradient(left, rgba(241,75,89,1) 0%,rgba(69,74,180,1) 50%,rgba(255,162,0,1) 100%);
 	background: linear-gradient(to right, rgba(241,75,89,1) 0%,rgba(69,74,180,1) 50%,rgba(255,162,0,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f14b59', endColorstr='#ffa200',GradientType=1 );
-	-webkit-transition: all 500ms ease;
-	-moz-transition: all 500ms ease;
-	-ms-transition: all 500ms ease;
-	-o-transition: all 500ms ease;
-	transition: all 500ms ease;
 }
 
 .shedule-block:hover:before{
@@ -8817,7 +8841,7 @@ a.ui-button:active, .ui-button:active,
 	position:relative;
 	display:block;
 	float:left;
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 30px;
 	color: #8a8d91;
 	font-weight: 500;
@@ -10011,7 +10035,7 @@ a.ui-button:active, .ui-button:active,
 	flex-wrap: wrap;
 }
 
-.slide-item { 
+.slide-item {
 	margin-right: 30px;
 	flex-grow: 0;
 }
