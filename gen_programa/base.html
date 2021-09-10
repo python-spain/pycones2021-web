@@ -694,13 +694,19 @@
                           <figure class="thumbs-box"><img src="{{charla['photo']}}" alt="{{charla['name']}}"></figure>
                           <div class="content-box">
                             <div class="date"><span class="icon far fa-clock"></span>{{charla['start']}} - {{charla['end']}}</div>
-                            <h4><a href="#">{{charla['title']}}</a></h4>
+                            <h4>{{charla['title']}}</h4>
                             {% if charla['description'] %}
                             <div class="collapse multi-collapse" id="{{collapse}}">{{charla['description']}}</div>
                             {% endif %}
                             <ul class="shedule-info clearfix">
                               {% if charla['name'] %}
-                              <li><span>por</span> <a href="{{charla['url']}}">{{charla['name']}}</a></li>
+                              <li><span>por</span>
+                                {% if charla['url'] %}
+                                <a href="{{charla['url']}}">{{charla['name']}}</a>
+                                {% else %}
+                                {{charla['name']}}
+                                {% endif %}
+                              </li>
                               {% endif %}
                               {% if charla['twitter'] %}
                               {% set username = charla['twitter'].replace('https://twitter.com/', '') %}
