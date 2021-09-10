@@ -89,6 +89,8 @@ def get_dict(day):
                 found = charlas.loc[charlas["title"].str.strip() == title]
                 name = found["name"].values[0]
                 url = found["url"].values[0]
+                if pd.isna(url):
+                    url = ""
                 desc = found["description"].values[0].rstrip().replace("\n", "<br/>")
                 # We use relative, because the 'images' directory is not here.
                 speaker_photo = f"../images/{clean(name)}.jpg"
