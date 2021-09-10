@@ -681,13 +681,13 @@
                   </div>
                   <!--End Tab Viernes -->
               <!--Tab Sábado y Domingo -->
-              {% set vars = {'2': sabado, '3': domingo} %}
-              {% for number, df in vars.items() %}
+              {% set dias = {'2': sabado, '3': domingo} %}
+              {% for number, df in dias.items() %}
                 {% for char in ["A", "B"] %}
                   {% set tab_name = "tab{}{}".format(number, char.lower()) %}
                   <div class="tab" id="{{tab_name}}">
                     {% for jdx, charla in df[df["block"] == char].iterrows() %}
-                      {% set collapse = "collapseDescription{}{}{}".format(loop.index0 + 2, char, jdx) %}
+                    {% set collapse = "collapseDesc{}{}{}{}".format(loop.index0 + 2, char, number, jdx) %}
                       <!-- Shedule Block -->
                       <div class="shedule-block">
                         <div class="inner-box clearfix">

@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 from jinja2 import Template
 
@@ -89,8 +90,15 @@ def get_dict(day):
                 name = found["name"].values[0]
                 url = found["url"].values[0]
                 desc = found["description"].values[0].rstrip().replace("\n", "<br/>")
-                # TODO: cuando tengamos las imagenes
-                # photo = f"images/{clean(name)}.jpg"
+                # We use relative, because the 'images' directory is not here.
+                speaker_photo = f"../images/{clean(name)}.jpg"
+                if os.path.isfile(speaker_photo):
+                    print("Speaker photo found:", speaker_photo)
+                    # We remove the relativeness from the path that we
+                    # know it starts with "../"
+                    photo = speaker_photo[3:]
+                else:
+                    print(f"No speaker photo for {name}: {speaker_photo}")
 
             if row_day == day:
                 # start end name photo url title description block twitter
