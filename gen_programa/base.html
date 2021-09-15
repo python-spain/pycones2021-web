@@ -698,9 +698,6 @@
                           <div class="content-box">
                             <div class="date"><span class="icon far fa-clock"></span>{{charla['start']}} - {{charla['end']}}</div>
                             <h4>{{charla['title']}}</h4>
-                            {% if charla['description'] %}
-                            <div class="collapse multi-collapse" id="{{collapse}}">{{charla['description']}}</div>
-                            {% endif %}
                             <ul class="shedule-info clearfix">
                               {% if charla['name'] %}
                               <li><span>por</span>
@@ -712,10 +709,22 @@
                               </li>
                               {% endif %}
                               {% if charla['twitter'] %}
-                              {% set username = charla['twitter'].replace('https://twitter.com/', '') %}
-                              <li><a href="{{charla['twitter']}}"><i class="fa fa-twitter" aria-hidden="true"></i> {{username}}</a></li>
+                                {% for tw in charla['twitter'].split() %}
+                                  {% if tw != "." %}
+                                    {% set username = tw.replace('https://twitter.com/', '') %}
+                                    <li><a href="{{tw}}"><i class="fa fa-twitter" aria-hidden="true"></i> {{username}}</a></li>
+                                  {% endif %}
+                                {% endfor %}
                               {% endif %}
                             </ul>
+                            {% if charla['description'] %}
+                            <div class="collapse multi-collapse" id="{{collapse}}">
+                            {% if charla['bio'] %}
+                            <blockquote>{{charla['bio']}}</blockquote>
+                            {% endif %}
+                            <h4 style="font-size: 20px; margin-top: 10px;">Descripción:</h4>
+                            {{charla['description']}}</div>
+                            {% endif %}
                           </div>
                           {% if charla['description'] %}
                           <div class="btn-box">
