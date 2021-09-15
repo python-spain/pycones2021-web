@@ -10040,14 +10040,33 @@ a.ui-button:active, .ui-button:active,
 	flex-grow: 0;
 }
 
+.slide-item figure {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .gold-sponsors .slide-item {
 	width: 350px;
 }
+
+.gold-sponsors .slide-item figure {
+	height: 200px;
+}
+
 
 .silver-sponsors .slide-item {
 	width: 300px;
 }
 
+.silver-sponsors .slide-item figure {
+	height: 150px;
+}
+
 .bronze-sponsors .slide-item {
 	width: 200px;
+}
+
+.bronze-sponsors .slide-item figure {
+	height: 100px;
 }
