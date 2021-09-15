@@ -33,7 +33,7 @@ def get_dict(day):
     i = 0
 
     for _, row in agenda.iterrows():
-        name = photo = url = title = description = twitter = None
+        name = photo = url = title = description = twitter = bio = None
         row_day = row["day"]
 
         start = row["start"]
@@ -76,9 +76,10 @@ def get_dict(day):
                 photo = found["photo"].values[0]
             elif title.startswith("Taller"):
                 found = talleres.loc[talleres["title"].str.strip() == title.replace("Taller: ", "")]
-                name = found["author"].values[0]
-                url = found["url"].values[0]
-                desc = found["description"].values[0]
+                name = clean_entry(found["author"])
+                url = clean_entry(found["url"])
+                desc = clean_entry(found["description"])
+                bio = clean_entry(found["bio"])
             # TODO: Agregar más información
             elif title.startswith("Sponsor"):
                 name = ""
@@ -87,11 +88,11 @@ def get_dict(day):
 
             else:
                 found = charlas.loc[charlas["title"].str.strip() == title]
-                name = found["name"].values[0]
-                url = found["url"].values[0]
-                if pd.isna(url):
-                    url = ""
-                desc = found["description"].values[0].rstrip().replace("\n", "<br/>")
+                name = clean_entry(found["name"])
+                url = clean_entry(found["url"])
+                twitter = clean_entry(found["twitter"])
+                bio = clean_entry(found["bio"])
+                desc = clean_entry(found["description"])
                 # We use relative, because the 'images' directory is not here.
                 speaker_photo = f"../images/{clean(name)}.jpg"
                 if os.path.isfile(speaker_photo):
@@ -104,15 +105,22 @@ def get_dict(day):
 
             if row_day == day:
                 # start end name photo url title description block twitter
-                d[i] = [start, end, name, photo, url, title, desc, ("A", "B")[bloque], twitter]
+                d[i] = [start, end, name, photo, url, title, desc, bio, ("A", "B")[bloque], twitter]
                 i += 1
 
     return d
 
+def clean_entry(entry):
+    v = entry.values[0]
+    if pd.isna(v):
+        return ""
+    else:
+        return v.rstrip().replace("\n", "<br/>")
+
 
 if __name__ == "__main__":
 
-    charlas = pd.read_csv("charlas.csv").drop(columns=["x", "y"])
+    charlas = pd.read_csv("charlas.csv", sep=";")
     talleres = pd.read_csv("talleres.csv")
     agenda = pd.read_csv("agenda.csv", sep=";")
     keynotes = pd.read_csv("keynotes.csv", sep=";")
@@ -120,7 +128,7 @@ if __name__ == "__main__":
     print(charlas)
     print(agenda)
     print(keynotes)
-    columnas = ("start", "end", "name", "photo", "url", "title", "description", "block", "twitter")
+    columnas = ("start", "end", "name", "photo", "url", "title", "description", "bio", "block", "twitter")
 
     conf = {
         day: pd.DataFrame.from_dict(get_dict(day), orient="index", columns=columnas)

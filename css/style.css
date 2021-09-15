@@ -10070,3 +10070,12 @@ a.ui-button:active, .ui-button:active,
 .bronze-sponsors .slide-item figure {
 	height: 100px;
 }
+
+blockquote {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  padding-left: 15px;
+  border-left: 5px solid #6e30aa;
+  display:inline-flex;
+}
