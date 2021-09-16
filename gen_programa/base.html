@@ -694,7 +694,19 @@
                       <!-- Shedule Block -->
                       <div class="shedule-block">
                         <div class="inner-box clearfix">
-                          <figure class="thumbs-box"><img src="{{charla['photo']}}" alt="{{charla['name']}}"></figure>
+                          {% if charla['description'] %}
+                          <div class="btn-box">
+                            <a class="theme-btn btn-style-three" data-toggle="collapse" href="#{{collapse}}" role="button" aria-expanded="false" aria-controls="{{collapse}}">Lee más</a>
+                          </div>
+                          {% endif %}
+                          <div class="photo-container">
+                            {% set count = 0 %}
+                            {% set photos = charla['photo'].split(' ') %}
+                            {% for speaker_name in charla['name'].split(',') %}
+                              <figure class="thumbs-box"><img src="{{photos[count]}}" alt="{{speaker_name}}"></figure>
+                              {% set count = count + 1 %}
+                            {% endfor %}
+                          </div>
                           <div class="content-box">
                             <div class="date"><span class="icon far fa-clock"></span>{{charla['start']}} - {{charla['end']}}</div>
                             <h4>{{charla['title']}}</h4>
@@ -726,11 +738,6 @@
                             {{charla['description']}}</div>
                             {% endif %}
                           </div>
-                          {% if charla['description'] %}
-                          <div class="btn-box">
-                            <a class="theme-btn btn-style-three" data-toggle="collapse" href="#{{collapse}}" role="button" aria-expanded="false" aria-controls="{{collapse}}">Lee más</a>
-                          </div>
-                          {% endif %}
                         </div>
                       </div>
                     {% endfor %}
