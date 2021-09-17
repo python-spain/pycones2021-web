@@ -78,7 +78,7 @@
                     id="navbarSupportedContent"
                   >
                     <ul class="navigation clearfix">
-                      <li class="current dropdown">
+                      <li>
                         <a href="#rev_slider_one_wrapper">Inicio</a>
                       </li>
                       <li>
@@ -975,6 +975,20 @@
     <div class="scroll-to-top scroll-to-target" data-target="html">
       <span class="fa fa-angle-double-up"></span>
     </div>
+    <script>
+      /* Código para dejar seleccionado el elemento del menú si hay un 'anchor'
+      en la URL */
+     var current = window.top.location.hash.substr(1);
+     if (current === "" ) {
+       current = "rev_slider_one_wrapper";
+     }
+     var menuItems = document.getElementById('navbarSupportedContent').querySelectorAll('ul li');
+     for (var i = 0, len = menuItems.length; i < len; i++) {
+       if (menuItems[i].getElementsByTagName('a')[0].href.indexOf(current) !== -1) {
+          menuItems[i].className += "current";
+       }
+     }
+    </script>
     <script src="js/jquery.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
