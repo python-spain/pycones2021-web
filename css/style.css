@@ -4387,12 +4387,16 @@ a.ui-button:active, .ui-button:active,
 .shedule-block .inner-box{
 	position: relative;
 	padding: 20px 35px 15px;
-	padding-left: 135px;
+	/* Removed for speaker photos
+	padding-left: 135px;*/
 	background-color: #ffffff;
 }
 
 .shedule-block .thumbs-box{
-	position: absolute;
+	/* Removed to allow more than one speaker
+	position: absolute;*/
+	float: left;
+	margin-right: 5px;
 	left: 35px;
 	top: 25px;
 	height: 70px;
@@ -4410,7 +4414,7 @@ a.ui-button:active, .ui-button:active,
 .shedule-block .content-box{
 	position: relative;
 	float: left;
-	max-width: 670px;
+	max-width: 800px;
 	width: 100%;
 }
 
@@ -4473,13 +4477,14 @@ a.ui-button:active, .ui-button:active,
 .shedule-block .shedule-info li{
 	position: relative;
 	float: left;
-	margin-right: 20px;
-	padding-right: 20px;
+	margin-right: 10px;
+	padding-right: 10px;
 	font-size: 16px;
 	line-height: 30px;
 	color: #212639;
 	font-weight: 400;
-	border-right: 2px dashed #f2f4f7;
+	border-right: 2px solid #f2f4f7;
+	list-style-type: none;
 }
 
 .shedule-block .shedule-info li:last-child{
@@ -4508,11 +4513,12 @@ a.ui-button:active, .ui-button:active,
 .shedule-block .btn-box{
 	position: relative;
 	float: right;
-	padding-top: 80px;
+	/*Removed to have the button at the top
+	 padding-top: 80px;*/
 }
 
 .shedule-block .btn-box a{
-	padding: 14px 40px;
+	padding: 20px 50px;
 	line-height: 20px;
 	font-size: 15px;
 }
@@ -10078,4 +10084,9 @@ blockquote {
   padding-left: 15px;
   border-left: 5px solid #6e30aa;
   display:inline-flex;
+}
+
+.photo-container {
+	width: 300px;
+	overflow: hidden;
 }

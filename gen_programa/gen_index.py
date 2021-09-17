@@ -3,7 +3,8 @@ import pandas as pd
 from jinja2 import Template
 
 
-def clean(s):
+def clean_name(s):
+    s = s.strip()
     r = (
         ("_", ""),
         (".", ""),
@@ -22,6 +23,14 @@ def clean(s):
     for before, after in r:
         s = s.replace(before, after)
     return s.lower()
+
+
+def clean_entry(entry):
+    v = entry.values[0]
+    if pd.isna(v):
+        return ""
+    else:
+        return v.rstrip().replace("\n", "<br/>")
 
 
 def get_dict(day):
@@ -44,7 +53,7 @@ def get_dict(day):
 
         for bloque, title in enumerate([talk_a, talk_b]):
             # default empty photo
-            photo = "images/resource/thumb-1.jpg"
+            default_photo = "images/resource/thumb-1.jpg"
 
             if title == "Apertura de la jornada":
                 name = "Organización PyConES"
@@ -66,6 +75,7 @@ def get_dict(day):
                 name = ""
                 url = ""
                 desc = ""
+                photo = default_photo
             elif title.startswith("Keynote"):
                 found = keynotes.loc[keynotes["title"].str.strip() == title]
                 name = found["name"].values[0]
@@ -80,42 +90,49 @@ def get_dict(day):
                 url = clean_entry(found["url"])
                 desc = clean_entry(found["description"])
                 bio = clean_entry(found["bio"])
+                photo = default_photo
             # TODO: Agregar más información
             elif title.startswith("Sponsor"):
                 name = ""
                 url = ""
                 desc = ""
+                photo = default_photo
 
             else:
                 found = charlas.loc[charlas["title"].str.strip() == title]
-                name = clean_entry(found["name"])
+                name_raw = clean_entry(found["name"])
                 url = clean_entry(found["url"])
                 twitter = clean_entry(found["twitter"])
                 bio = clean_entry(found["bio"])
                 desc = clean_entry(found["description"])
                 # We use relative, because the 'images' directory is not here.
-                speaker_photo = f"../images/{clean(name)}.jpg"
-                if os.path.isfile(speaker_photo):
-                    print("Speaker photo found:", speaker_photo)
-                    # We remove the relativeness from the path that we
-                    # know it starts with "../"
-                    photo = speaker_photo[3:]
-                else:
-                    print(f"No speaker photo for {name}: {speaker_photo}")
+                if "Maciel" in name_raw:
+                    print(name_raw)
 
+                # Check for many speakers
+                names = name_raw.split(",")
+                photos = []
+                for speaker_name in names:
+                    speaker_photo = f"../images/{clean_name(speaker_name)}.jpg"
+
+                    if os.path.isfile(speaker_photo):
+                        print("Speaker photo found:", speaker_photo)
+                        # We remove the relativeness from the path that we
+                        # know it starts with "../"
+                        photos.append(speaker_photo[3:])
+                    else:
+                        print(f"No speaker photo for {speaker_name}: {speaker_photo}")
+                        photos.append(default_photo)
+                photo = " ".join(photos)
+                name = name_raw
+
+            # Add to the returning dict
             if row_day == day:
                 # start end name photo url title description block twitter
                 d[i] = [start, end, name, photo, url, title, desc, bio, ("A", "B")[bloque], twitter]
                 i += 1
 
     return d
-
-def clean_entry(entry):
-    v = entry.values[0]
-    if pd.isna(v):
-        return ""
-    else:
-        return v.rstrip().replace("\n", "<br/>")
 
 
 if __name__ == "__main__":
