@@ -700,11 +700,9 @@
                           </div>
                           {% endif %}
                           <div class="photo-container">
-                            {% set count = 0 %}
                             {% set photos = charla['photo'].split(' ') %}
                             {% for speaker_name in charla['name'].split(',') %}
-                              <figure class="thumbs-box"><img src="{{photos[count]}}" alt="{{speaker_name}}"></figure>
-                              {% set count = count + 1 %}
+                              <figure class="thumbs-box"><img src="{{photos[loop.index0]}}" alt="{{speaker_name}}"></figure>
                             {% endfor %}
                           </div>
                           <div class="content-box">
