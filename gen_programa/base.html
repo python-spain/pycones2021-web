@@ -691,21 +691,31 @@
                     {% set collapse = "collapseDesc{}{}{}{}".format(loop.index0 + 2, char, number, jdx) %}
                       <!-- Shedule Block -->
                       <div class="shedule-block">
+                        {% if 'Keynote' in charla['title'] %}
+                        <div class="inner-box clearfix" style="background-color: #fffbed;">
+                        {% elif 'Taller' in charla['title'] %}
+                        <div class="inner-box clearfix" style="background-color: #dbe3de;">
+                        {% elif 'Sponsor' in charla['title'] %}
+                        <div class="inner-box clearfix" style="background-color: #e4e5ff;">
+                        {% else %}
                         <div class="inner-box clearfix">
+                        {% endif %}
                           {% if charla['description'] %}
                           <div class="btn-box">
                             <a class="theme-btn btn-style-three" data-toggle="collapse" href="#{{collapse}}" role="button" aria-expanded="false" aria-controls="{{collapse}}">Lee más</a>
                           </div>
                           {% endif %}
+                          {% if 'Almuerzo' not in charla['title'] %}
                           <div class="photo-container">
                             {% set photos = charla['photo'].split(' ') %}
                             {% for speaker_name in charla['name'].split(',') %}
                               <figure class="thumbs-box"><img src="{{photos[loop.index0]}}" alt="{{speaker_name}}"></figure>
                             {% endfor %}
                           </div>
+                          {% endif %}
                           <div class="content-box">
                             <div class="date"><span class="icon far fa-clock"></span>{{charla['start']}} - {{charla['end']}}</div>
-                            <h4>{{charla['title']}}</h4>
+                            <h4>{{ '🎉' if 'Keynote' in charla['title'] else '' }}{{charla['title']}}</h4>
                             <ul class="shedule-info clearfix">
                               {% if charla['name'] %}
                               <li><span>por</span>
