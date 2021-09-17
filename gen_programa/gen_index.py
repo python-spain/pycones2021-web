@@ -33,6 +33,24 @@ def clean_entry(entry):
         return v.rstrip().replace("\n", "<br/>")
 
 
+def get_photos(name_raw):
+    # Check for many speakers
+    names = name_raw.split(",")
+    photos = []
+    for speaker_name in names:
+        speaker_photo = f"../images/{clean_name(speaker_name)}.jpg"
+
+        if os.path.isfile(speaker_photo):
+            print("Speaker photo found:", speaker_photo)
+            # We remove the relativeness from the path that we
+            # know it starts with "../"
+            photos.append(speaker_photo[3:])
+        else:
+            print(f"No speaker photo for {speaker_name}: {speaker_photo}")
+            photos.append(default_photo)
+    return " ".join(photos)
+
+
 def get_dict(day):
     """
     Build a dictionary based on the information from different
@@ -52,8 +70,6 @@ def get_dict(day):
         talk_b = row["talk_b"].strip()
 
         for bloque, title in enumerate([talk_a, talk_b]):
-            # default empty photo
-            default_photo = "images/resource/thumb-1.jpg"
 
             if title == "Apertura de la jornada":
                 name = "Organización PyConES"
@@ -90,7 +106,7 @@ def get_dict(day):
                 url = clean_entry(found["url"])
                 desc = clean_entry(found["description"])
                 bio = clean_entry(found["bio"])
-                photo = default_photo
+                photo = get_photos(name)
             # TODO: Agregar más información
             elif title.startswith("Sponsor"):
                 name = ""
@@ -100,31 +116,14 @@ def get_dict(day):
 
             else:
                 found = charlas.loc[charlas["title"].str.strip() == title]
-                name_raw = clean_entry(found["name"])
+                name = clean_entry(found["name"])
                 url = clean_entry(found["url"])
                 twitter = clean_entry(found["twitter"])
                 bio = clean_entry(found["bio"])
                 desc = clean_entry(found["description"])
                 # We use relative, because the 'images' directory is not here.
-                if "Maciel" in name_raw:
-                    print(name_raw)
 
-                # Check for many speakers
-                names = name_raw.split(",")
-                photos = []
-                for speaker_name in names:
-                    speaker_photo = f"../images/{clean_name(speaker_name)}.jpg"
-
-                    if os.path.isfile(speaker_photo):
-                        print("Speaker photo found:", speaker_photo)
-                        # We remove the relativeness from the path that we
-                        # know it starts with "../"
-                        photos.append(speaker_photo[3:])
-                    else:
-                        print(f"No speaker photo for {speaker_name}: {speaker_photo}")
-                        photos.append(default_photo)
-                photo = " ".join(photos)
-                name = name_raw
+                photo = get_photos(name)
 
             # Add to the returning dict
             if row_day == day:
@@ -145,6 +144,7 @@ if __name__ == "__main__":
     print(charlas)
     print(agenda)
     print(keynotes)
+    default_photo = "images/resource/thumb-1.jpg"
     columnas = ("start", "end", "name", "photo", "url", "title", "description", "bio", "block", "twitter")
 
     conf = {
