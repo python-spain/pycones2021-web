@@ -107,11 +107,6 @@ def get_dict(day):
                 desc = clean_entry(found["description"])
                 bio = clean_entry(found["bio"])
                 photo = get_photos(name)
-                print("-"*20)
-                print(title)
-                print(name)
-                print(photo)
-                print("-"*20)
             # TODO: Agregar más información
             elif title.startswith("Sponsor"):
                 name = ""
