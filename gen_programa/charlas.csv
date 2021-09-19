@@ -187,33 +187,11 @@ Using Bayesian Structural Time Series, this package helps to predict the “cont
 Using its Python implementation and finding the way of choosing the best explanatory variables for CausalImpact's time series model was very helpful to estimate the effect of a major change at habitissimo business model, a practical case that will help me to go through the benefits and drawbacks of using this method in comparison to AB testing and explain why such approach makes sense in a real business environment.
 
 Original Google Paper: https://research.google/pubs/pub41854/";Autorizo a la Asociación Python España a que utilice los datos aquí facilitados con carácter interno durante la organización y desarrollo del evento PyConES 2021. Los datos serán tratados por la Asociación Python España con la máxima confidencialidad, de acuerdo con  Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos, y siguiendo las Recomendaciones e Instrucciones emitidas por la Agencia Española de Protección de Datos (A.E.P.D.). Tras la finalización del evento, los datos serán borrados.;9;;
-28;02/05/2021 17:58:05;¿Cuánto contribuyo al cambio climático? Midiendo la huella de carbono con Python y FastAPI;Charo Rey Zabalza, Guillermo Castellano;gcastellano@segara.io;https://gitlab.com/segara/segara-co2-api/;"La reducción de los gases de efecto invernadero se ha trasladado a
-la agenda pública internacional y nacional, con recomendaciones como
-los Objetivos de Desarrollo Sostenible de Naciones Unidas, y un
-emergente marco regulatorio en materia de medioambiente y de
-reducción de emisiones. Partiendo de la base de que “lo que no se
-mide, no se puede mejorar y lo que no se mejora, se degrada siempre”,
-formulada por el físico y matemático William Thomson Kelvin, nos
-hemos unido personas procedentes de los ámbitos medioambiental,
-jurídico y tecnológico para desarrollar una aplicación que
-facilite a las empresas y organizaciones medir su huella de carbono y
-mitigar su contribución al cambio climático.
+28;02/05/2021 17:58:05;¿Cuánto contribuyo al cambio climático? Midiendo la huella de carbono con Python y FastAPI;Charo Rey Zabalza, Guillermo Castellano;gcastellano@segara.io;https://gitlab.com/segara/segara-co2-api/;"La reducción de los gases de efecto invernadero se ha trasladado a la agenda pública internacional y nacional, con recomendaciones como los Objetivos de Desarrollo Sostenible de Naciones Unidas, y un emergente marco regulatorio en materia de medioambiente y de reducción de emisiones. Partiendo de la base de que “lo que no se mide, no se puede mejorar y lo que no se mejora, se degrada siempre”, formulada por el físico y matemático William Thomson Kelvin, nos hemos unido personas procedentes de los ámbitos medioambiental, jurídico y tecnológico para desarrollar una aplicación que facilite a las empresas y organizaciones medir su huella de carbono y mitigar su contribución al cambio climático.
 
-El núcleo de esta aplicación es una API REST liberada bajo licencia
-AGPL. El software libre dota de transparencia a nuestro proyecto y
-permite a la comunidad involucrarse en el desarrollo, así como
-adaptar el código a sus necesidades concretas. Para el desarrollo
-hemos optado por FastAPI, un framework para construir APIs con Python
-3.6 o superior basado en las anotaciones de tipos.
+El núcleo de esta aplicación es una API REST liberada bajo licencia AGPL. El software libre dota de transparencia a nuestro proyecto y permite a la comunidad involucrarse en el desarrollo, así como adaptar el código a sus necesidades concretas. Para el desarrollo hemos optado por FastAPI, un framework para construir APIs con Python 3.6 o superior basado en las anotaciones de tipos.
 
-En esta charla mostraremos cómo se miden las emisiones de CO2 de una
-organización y cuáles son las ventajas de hacerlo con una
-aplicación como la que hemos desarrollado, más acorde con los
-tiempos y con más posibilidades que las herramientas basadas en
-hojas de cálculo que imperan actualmente. Será también una
-oportunidad para ver un ejemplo real de lo que se puede lograr con
-FastAPI, una tecnología que, en apenas 2 años desde su lanzamiento,
-se ha ganado un puesto entre los tres frameworks más populares de
+En esta charla mostraremos cómo se miden las emisiones de CO2 de una organización y cuáles son las ventajas de hacerlo con una aplicación como la que hemos desarrollado, más acorde con los tiempos y con más posibilidades que las herramientas basadas en hojas de cálculo que imperan actualmente. Será también una oportunidad para ver un ejemplo real de lo que se puede lograr con FastAPI, una tecnología que, en apenas 2 años desde su lanzamiento, se ha ganado un puesto entre los tres frameworks más populares de
 Python.";Autorizo a la Asociación Python España a que utilice los datos aquí facilitados con carácter interno durante la organización y desarrollo del evento PyConES 2021. Los datos serán tratados por la Asociación Python España con la máxima confidencialidad, de acuerdo con  Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos, y siguiendo las Recomendaciones e Instrucciones emitidas por la Agencia Española de Protección de Datos (A.E.P.D.). Tras la finalización del evento, los datos serán borrados.;4,5;"Charo Rey Zabalza: Físico de formación, forjada en la gestión de los residuos y empeñada en diseñar un futuro mejor y disfrutar con ello haciendo que las cosas pasen. Aporto todas mis competencias y mis 20 años de experiencia desde un perfil técnico sólido transversal, apasionado y colaborativo.
 
 Guillermo Rey Zabalza: De formación humanista, me especialicé en gestión de documentos electrónicos y me dedico desde 2016 a la consultoría tecnológica y el desarrollo de software. Apuesto por el escepticismo, la transversalidad y el conocimiento abierto. Me apasionan el software libre y la historia.";https://linkedin.com/in/charoreyzabalza/ https://twitter.com/guillearch
