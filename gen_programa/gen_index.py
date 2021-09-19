@@ -107,6 +107,7 @@ def get_dict(day):
                 ]
                 name = clean_entry(found["author"])
                 url = clean_entry(found["url"])
+                social = clean_entry(found["social"])
                 desc = clean_entry(found["description"])
                 bio = clean_entry(found["bio"])
                 photo = get_photos(name)

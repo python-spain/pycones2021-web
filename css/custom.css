@@ -16,3 +16,9 @@
 .inner-box.sponsor .btn-box a {
   border: 1px solid gray;
 }
+
+.inner-box.keynote ul.shedule-info li:not(:last-child),
+.inner-box.workshop ul.shedule-info li:not(:last-child),
+.inner-box.sponsor ul.shedule-info li:not(:last-child) {
+  border-right: 2px solid lightgray;
+}
