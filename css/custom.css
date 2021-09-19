@@ -1,0 +1,18 @@
+/* Schedule boxes */
+.inner-box.keynote {
+  background-color: #fffbed;
+}
+
+.inner-box.workshop {
+  background-color: #dbe3de;
+}
+
+.inner-box.sponsor {
+  background-color: #e4e5ff;
+}
+
+.inner-box.keynote .btn-box a,
+.inner-box.workshop .btn-box a,
+.inner-box.sponsor .btn-box a {
+  border: 1px solid gray;
+}
