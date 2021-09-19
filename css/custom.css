@@ -29,3 +29,7 @@
 nav.main-menu ul.navigation li::marker {
   content: none;
 }
+
+.shedule-tabs .tab-buttons li.tab-btn:hover {
+  background-color: #ffc600;
+}
