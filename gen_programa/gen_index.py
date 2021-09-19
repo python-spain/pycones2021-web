@@ -1,4 +1,5 @@
 import os
+
 import pandas as pd
 from jinja2 import Template
 
@@ -60,7 +61,7 @@ def get_dict(day):
     i = 0
 
     for _, row in agenda.iterrows():
-        name = photo = url = title = description = twitter = bio = None
+        name = photo = url = title = desc = twitter = bio = None
         row_day = row["day"]
 
         start = row["start"]
@@ -101,7 +102,9 @@ def get_dict(day):
                 # desc = found["description"].values[0]
                 photo = found["photo"].values[0]
             elif title.startswith("Taller"):
-                found = talleres.loc[talleres["title"].str.strip() == title.replace("Taller: ", "")]
+                found = talleres.loc[
+                    talleres["title"].str.strip() == title.replace("Taller: ", "")
+                ]
                 name = clean_entry(found["author"])
                 url = clean_entry(found["url"])
                 desc = clean_entry(found["description"])
@@ -109,11 +112,14 @@ def get_dict(day):
                 photo = get_photos(name)
             # TODO: Agregar más información
             elif title.startswith("Sponsor"):
-                name = ""
-                url = ""
-                desc = ""
-                photo = default_photo
-
+                found = sponsors.loc[
+                    sponsors["title"].str.strip() == title.replace("Sponsor: ", "")
+                ]
+                name = found["name"].values[0]
+                url = found["url"].values[0]
+                twitter = found["twitter"].values[0]
+                desc = found["description"].values[0]
+                photo = found["photo"].values[0]
             else:
                 found = charlas.loc[charlas["title"].str.strip() == title]
                 name = clean_entry(found["name"])
@@ -128,7 +134,18 @@ def get_dict(day):
             # Add to the returning dict
             if row_day == day:
                 # start end name photo url title description block twitter
-                d[i] = [start, end, name, photo, url, title, desc, bio, ("A", "B")[bloque], twitter]
+                d[i] = [
+                    start,
+                    end,
+                    name,
+                    photo,
+                    url,
+                    title,
+                    desc,
+                    bio,
+                    ("A", "B")[bloque],
+                    twitter,
+                ]
                 i += 1
 
     return d
@@ -140,12 +157,25 @@ if __name__ == "__main__":
     talleres = pd.read_csv("talleres.csv")
     agenda = pd.read_csv("agenda.csv", sep=";")
     keynotes = pd.read_csv("keynotes.csv", sep=";")
+    sponsors = pd.read_csv("sponsors.csv", sep=";")
     print(talleres)
     print(charlas)
     print(agenda)
     print(keynotes)
+    print(sponsors)
     default_photo = "images/resource/thumb-1.jpg"
-    columnas = ("start", "end", "name", "photo", "url", "title", "description", "bio", "block", "twitter")
+    columnas = (
+        "start",
+        "end",
+        "name",
+        "photo",
+        "url",
+        "title",
+        "description",
+        "bio",
+        "block",
+        "twitter",
+    )
 
     conf = {
         day: pd.DataFrame.from_dict(get_dict(day), orient="index", columns=columnas)
@@ -154,6 +184,6 @@ if __name__ == "__main__":
     rendered_template = Template(open("base.html").read()).render(conf)
 
     # Write final HTML
-    with open(f"../index.html", "w") as f:
+    with open("../index.html", "w") as f:
         f.write(rendered_template)
         print("Written file ../index.html")
