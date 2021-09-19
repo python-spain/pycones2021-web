@@ -1,4 +1,3 @@
-/* Schedule boxes */
 .inner-box.keynote {
   background-color: #fffbed;
 }
@@ -21,4 +20,12 @@
 .inner-box.workshop ul.shedule-info li:not(:last-child),
 .inner-box.sponsor ul.shedule-info li:not(:last-child) {
   border-right: 2px solid lightgray;
+}
+
+.shedule-tabs li.tab-btn::marker {
+  content: none;
+}
+
+nav.main-menu ul.navigation li::marker {
+  content: none;
 }
