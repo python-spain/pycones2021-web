@@ -39,7 +39,7 @@ def get_photos(name_raw):
     names = name_raw.split(",")
     photos = []
     for speaker_name in names:
-        speaker_photo = f"../images/{clean_name(speaker_name)}.jpg"
+        speaker_photo = f"../images/speakers/{clean_name(speaker_name)}.jpg"
 
         if os.path.isfile(speaker_photo):
             print("Speaker photo found:", speaker_photo)
