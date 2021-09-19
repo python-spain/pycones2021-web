@@ -25,6 +25,12 @@
       rel="stylesheet"
       type="text/css"
     />
+    <!-- CUSTOM STYLES -->
+    <link
+      href="css/custom.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <!-- REVOLUTION NAVIGATION STYLES -->
 
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
@@ -692,15 +698,17 @@
                     {% set collapse = "collapseDesc{}{}{}{}".format(loop.index0 + 2, char, number, jdx) %}
                       <!-- Shedule Block -->
                       <div class="shedule-block">
+                        <div class="inner-box clearfix
                         {% if 'Keynote' in charla['title'] %}
-                        <div class="inner-box clearfix" style="background-color: #fffbed;">
+                          keynote
                         {% elif 'Taller' in charla['title'] %}
-                        <div class="inner-box clearfix" style="background-color: #dbe3de;">
+                          workshop
                         {% elif 'Sponsor' in charla['title'] %}
-                        <div class="inner-box clearfix" style="background-color: #e4e5ff;">
+                          sponsor
                         {% else %}
-                        <div class="inner-box clearfix">
+                          talk
                         {% endif %}
+                        ">
                           {% if charla['description'] %}
                           <div class="btn-box">
                             <a class="theme-btn btn-style-three" data-toggle="collapse" href="#{{collapse}}" role="button" aria-expanded="false" aria-controls="{{collapse}}">Lee más</a>
