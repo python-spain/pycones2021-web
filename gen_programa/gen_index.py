@@ -61,7 +61,7 @@ def get_dict(day):
     i = 0
 
     for _, row in agenda.iterrows():
-        name = photo = url = title = desc = twitter = bio = None
+        name = photo = url = title = desc = social = bio = None
         row_day = row["day"]
 
         start = row["start"]
@@ -97,7 +97,7 @@ def get_dict(day):
                 found = keynotes.loc[keynotes["title"].str.strip() == title]
                 name = found["name"].values[0]
                 url = found["url"].values[0]
-                twitter = found["twitter"].values[0]
+                social = found["social"].values[0]
                 # TODO: Pendiente
                 # desc = found["description"].values[0]
                 photo = found["photo"].values[0]
@@ -117,14 +117,14 @@ def get_dict(day):
                 ]
                 name = found["name"].values[0]
                 url = found["url"].values[0]
-                twitter = found["twitter"].values[0]
+                social = found["social"].values[0]
                 desc = found["description"].values[0]
                 photo = found["photo"].values[0]
             else:
                 found = charlas.loc[charlas["title"].str.strip() == title]
                 name = clean_entry(found["name"])
                 url = clean_entry(found["url"])
-                twitter = clean_entry(found["twitter"])
+                social = clean_entry(found["social"])
                 bio = clean_entry(found["bio"])
                 desc = clean_entry(found["description"])
                 # We use relative, because the 'images' directory is not here.
@@ -133,7 +133,7 @@ def get_dict(day):
 
             # Add to the returning dict
             if row_day == day:
-                # start end name photo url title description block twitter
+                # start end name photo url title description block social
                 d[i] = [
                     start,
                     end,
@@ -144,7 +144,7 @@ def get_dict(day):
                     desc,
                     bio,
                     ("A", "B")[bloque],
-                    twitter,
+                    social,
                 ]
                 i += 1
 
@@ -174,7 +174,7 @@ if __name__ == "__main__":
         "description",
         "bio",
         "block",
-        "twitter",
+        "social",
     )
 
     conf = {

@@ -735,11 +735,19 @@
                                 {% endif %}
                               </li>
                               {% endif %}
-                              {% if charla['twitter'] %}
-                                {% for tw in charla['twitter'].split() %}
+                              {% if charla['social'] %}
+                                {% for tw in charla['social'].split() %}
                                   {% if tw != "." %}
+                                    {% if 'twitter' in tw %}
                                     {% set username = tw.replace('https://twitter.com/', '') %}
                                     <li><a href="{{tw}}"><i class="fa fa-twitter" aria-hidden="true"></i> {{username}}</a></li>
+                                    {% elif 'linkedin' in tw %}
+                                    {% set username = tw.replace('https://linkedin.com/in', '').replace('/', '') %}
+                                    <li><a href="{{tw}}"><i class="fa fa-linkedin" aria-hidden="true"></i> {{username}}</a></li>
+                                    {% elif 'github' in tw %}
+                                    {% set username = tw.replace('https://github.com/', '') %}
+                                    <li><a href="{{tw}}"><i class="fa fa-github" aria-hidden="true"></i> {{username}}</a></li>
+                                    {% endif %}
                                   {% endif %}
                                 {% endfor %}
                               {% endif %}
