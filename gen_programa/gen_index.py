@@ -86,7 +86,17 @@ def get_dict(day):
                 name = "Directiva Python España"
                 url = "https://es.python.org"
                 photo = "images/pythonES_logo_simple.png"
-                desc = ""
+                desc = ("El sábado 2 de octubre de 2021 a las 18:30 en primera "
+                        "convocatoria y a las 19:00 en segunda convocatoria "
+                        "(hora peninsular) se celebrará la Asamblea "
+                        "Extraordinaria de la Asociación. Como viene siendo "
+                        "habitual, la asamblea extraordinaria se celebrará al "
+                        "finalizar la primera jornada de la PyConES 2021.<br/>"
+                        "Para el comienzo y amenizar la espera entre la primera "
+                        "y segunda convocatoria, prepararemos alguna sorpresa "
+                        "y puede que hasta podáis ganar algún premio. Así que "
+                        "¡sed puntuales!")
+
             # TODO: Agregar más información
             elif title == "Almuerzo":
                 name = ""
