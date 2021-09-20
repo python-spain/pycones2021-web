@@ -762,9 +762,11 @@
                             </ul>
                             {% if charla['description'] %}
                             <div class="collapse multi-collapse" id="{{collapse}}">
+                            {% endif %}
                             {% if charla['bio'] %}
                             <blockquote>{{charla['bio']}}</blockquote>
                             {% endif %}
+                            {% if charla['description'] %}
                             <h4 style="font-size: 20px; margin-top: 10px;">Descripción:</h4>
                             {{charla['description']}}</div>
                             {% endif %}
