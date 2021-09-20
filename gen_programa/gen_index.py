@@ -98,8 +98,7 @@ def get_dict(day):
                 name = found["name"].values[0]
                 url = found["url"].values[0]
                 social = found["social"].values[0]
-                # TODO: Pendiente
-                # desc = found["description"].values[0]
+                bio = found["bio"].values[0]
                 photo = found["photo"].values[0]
             elif title.startswith("Taller"):
                 found = talleres.loc[
