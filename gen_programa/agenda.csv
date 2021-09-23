@@ -1,29 +1,29 @@
 day;start;end;talk_a;talk_b
-sabado;09:00;09:05;"Apertura de la jornada";"Apertura de la jornada"
-sabado;09:10;09:40;"¿Cuánto contribuyo al cambio climático? Midiendo la huella de carbono con Python y FastAPI";"Documenta sin ser un escriba"
-sabado;09:45;10:15;"Microservicios en el mundo real con Python";"Haciendo copias de seguridad de todo el conocimiento humano con Python y software libre"
-sabado;10:20;10:50;"Python testing best practices";"Psicología Social y Machine Learning: un futuro ético"
-sabado;10:55;11:25;"Minority Report en Londres: Un análisis de las consecuencias del sesgo en la policía predictiva";"Testing efectivo con pytest"
-sabado;11:30;11:40;"Sponsor: CodeSyntax";"Sponsor: Ravenloop"
-sabado;11:45;12:15;"Deep learning-based super-resolution of climate forecast data";"Documenta tu proyecto con Markdown, Sphinx, y Read the Docs"
-sabado;12:20;12:50;"Introducción a los algoritmos bioinspirados con Python";"Python para equipos de ciberseguridad"
-sabado;12:55;13:25;"Reales de verdad";"Mapeando fenología desde el cielo"
-sabado;13:30;14:00;"La Química en Python con Algoritmos Estocásticos";"Interpretación de modelos de clasificación usando Python:  abriendo la caja  negra usando SHAP en física de partículas"
-sabado;14:00;15:30;"Almuerzo";"Almuerzo"
-sabado;15:30;16:15;"Keynote: Developing comunidad 2.0";"Keynote: Developing comunidad 2.0"
-sabado;16:30;19:00;"Taller: ¡Oh, un modelo de ML, vamos a desplegarlo! - Machine learning para adultos";"Taller: De 0 a Django REST"
-sabado;19:00;20:00;"Asamblea Extraordinaria de Python España";"Asamblea Extraordinaria de Python España"
-domingo;09:00;09:05;"Apertura de la jornada";"Apertura de la jornada"
-domingo;09:10;09:40;"Tracking counterfeiting on the Web with Python and ML";"Buenas prácticas para enseñar programación online"
-domingo;09:45;10:15;"An introduction to hands-on football data analysis in Python";"Como compartir grandes Datasets entre procesos sin perder la salud mental"
-domingo;10:20;10:50;"Adiós Django: tu API usando solo Python";"Entrega tu producto como una API"
-domingo;10:55;11:25;"Desarrollo dirigido por modelos, ¿humo o realidad?: Python como motor para la generación automática de dashboards y visualizaciones de datos";"Qt for Python: METAL EDITION!"
-domingo;11:30;11:40;"Sponsor: Intelygenz";"Sponsor: TBD"
-domingo;11:45;12:15;"Creating a well-being data layer using machine learning, satellite imagery and ground-truth data";"Un salto cuántico con Python: experiencia en programación cuántica desde cero"
-domingo;12:20;12:50;"Clean Architectures with FastAPI";"Reconstrucción 3D en interiores a partir de imágenes 360º"
-domingo;12:55;13:25;"SQLite, la (des) conocida super hormiga";"Hackeando CPython de forma divertida"
-domingo;13:30;14:00;"Helping social entities to share private information using homomorphic encryption";"Enseñando a enseñar"
-domingo;14:00;15:30;"Almuerzo";"Almuerzo"
-domingo;15:30;16:15;"Keynote: El camino recorrido, desde centroamérica hasta acá";"Keynote: El camino recorrido, desde centroamérica hasta acá"
-domingo;16:30;19:00;"Taller: Más Allá de Bitcoin: Redes P2P y Blockchain en Python";"Taller: Utilizando python para mejorar mi Cyber-Swiss army knife"
-domingo;19:00;20:00;"Sorteos y Clausura";"Sorteos y Clausura"
+sabado;09:00;09:05;Apertura de la jornada;Apertura de la jornada
+sabado;09:10;09:40;¿Cuánto contribuyo al cambio climático? Midiendo la huella de carbono con Python y FastAPI;Documenta sin ser un escriba
+sabado;09:45;10:15;Microservicios en el mundo real con Python;Haciendo copias de seguridad de todo el conocimiento humano con Python y software libre
+sabado;10:20;10:50;Python testing best practices;Psicología Social y Machine Learning: un futuro ético
+sabado;10:55;11:25;Minority Report en Londres: Un análisis de las consecuencias del sesgo en la policía predictiva;Testing efectivo con pytest
+sabado;11:30;11:40;Sponsor: CodeSyntax;Sponsor: Ravenloop
+sabado;11:45;12:15;Deep learning-based super-resolution of climate forecast data;Documenta tu proyecto con Markdown, Sphinx, y Read the Docs
+sabado;12:20;12:50;Introducción a los algoritmos bioinspirados con Python;Python para equipos de ciberseguridad
+sabado;12:55;13:25;Reales de verdad;Mapeando fenología desde el cielo
+sabado;13:30;14:00;La Química en Python con Algoritmos Estocásticos;Interpretación de modelos de clasificación usando Python:  abriendo la caja  negra usando SHAP en física de partículas
+sabado;14:00;15:30;Almuerzo;Almuerzo
+sabado;15:30;16:15;Keynote: Developing comunidad 2.0;Keynote: Developing comunidad 2.0
+sabado;16:30;19:00;Taller: ¡Oh, un modelo de ML, vamos a desplegarlo! - Machine learning para adultos;Taller: De 0 a Django REST
+sabado;19:00;20:00;Asamblea Extraordinaria de Python España;Asamblea Extraordinaria de Python España
+domingo;09:00;09:05;Apertura de la jornada;Apertura de la jornada
+domingo;09:10;09:40;Tracking counterfeiting on the Web with Python and ML;Buenas prácticas para enseñar programación online
+domingo;09:45;10:15;An introduction to hands-on football data analysis in Python;Como compartir grandes Datasets entre procesos sin perder la salud mental
+domingo;10:20;10:50;Adiós Django: tu API usando solo Python;Entrega tu producto como una API
+domingo;10:55;11:25;Desarrollo dirigido por modelos, ¿humo o realidad?: Python como motor para la generación automática de dashboards y visualizaciones de datos;Qt for Python: METAL EDITION!
+domingo;11:30;11:40;Sponsor: Intelygenz;Sponsor: TBD
+domingo;11:45;12:15;Helping social entities to share private information using homomorphic encryption;Un salto cuántico con Python: experiencia en programación cuántica desde cero
+domingo;12:20;12:50;Clean Architectures with FastAPI;Reconstrucción 3D en interiores a partir de imágenes 360º
+domingo;12:55;13:25;SQLite, la (des) conocida super hormiga;Hackeando CPython de forma divertida
+domingo;13:30;14:00;Creating a well-being data layer using machine learning, satellite imagery and ground-truth data;Enseñando a enseñar
+domingo;14:00;15:30;Almuerzo;Almuerzo
+domingo;15:30;16:15;Keynote: El camino recorrido, desde centroamérica hasta acá;Keynote: El camino recorrido, desde centroamérica hasta acá
+domingo;16:30;19:00;Taller: Más Allá de Bitcoin: Redes P2P y Blockchain en Python;Taller: Utilizando python para mejorar mi Cyber-Swiss army knife
+domingo;19:00;20:00;Sorteos y Clausura;Sorteos y Clausura
