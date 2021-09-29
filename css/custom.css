@@ -37,3 +37,19 @@ nav.main-menu ul.navigation li::marker {
 .call-to-action .title {
   font-size: 25px;
 }
+
+.side-link {
+  margin-top: 1rem;
+}
+
+.btn-box .side-link a {
+  font-size: 16px;
+}
+
+.btn-box .side-link a:hover {
+  box-shadow: none;
+}
+
+.inner-box .btn-box .side-link a {
+  border: none;
+}

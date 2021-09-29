@@ -1,5 +1,5 @@
 day;start;end;talk_a;talk_b
-sabado;09:00;09:05;Apertura de la jornada;Apertura de la jornada
+sabado;09:00;09:05;Apertura de la jornada Sábado;Apertura de la jornada Sábado
 sabado;09:10;09:40;¿Cuánto contribuyo al cambio climático? Midiendo la huella de carbono con Python y FastAPI;Documenta sin ser un escriba
 sabado;09:45;10:15;Microservicios en el mundo real con Python;Haciendo copias de seguridad de todo el conocimiento humano con Python y software libre
 sabado;10:20;10:50;Python testing best practices;Psicología Social y Machine Learning: un futuro ético
@@ -13,7 +13,7 @@ sabado;14:00;15:30;Almuerzo;Almuerzo
 sabado;15:30;16:15;Keynote: Developing comunidad 2.0;Keynote: Developing comunidad 2.0
 sabado;16:30;19:00;Taller: ¡Oh, un modelo de ML, vamos a desplegarlo! - Machine learning para adultos;Taller: De 0 a Django REST
 sabado;19:00;20:00;Asamblea Extraordinaria de Python España;Asamblea Extraordinaria de Python España
-domingo;09:00;09:05;Apertura de la jornada;Apertura de la jornada
+domingo;09:00;09:05;Apertura de la jornada Domingo;Apertura de la jornada Domingo
 domingo;09:10;09:40;Tracking counterfeiting on the Web with Python and ML;Buenas prácticas para enseñar programación online
 domingo;09:45;10:15;An introduction to hands-on football data analysis in Python;Como compartir grandes Datasets entre procesos sin perder la salud mental
 domingo;10:20;10:50;Adiós Django: tu API usando solo Python;Entrega tu producto como una API

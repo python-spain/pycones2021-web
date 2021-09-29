@@ -731,11 +731,17 @@
                           talk
                         {% endif %}
                         ">
-                          {% if charla['description'] %}
                           <div class="btn-box">
-                            <a class="theme-btn btn-style-three" data-toggle="collapse" href="#{{collapse}}" role="button" aria-expanded="false" aria-controls="{{collapse}}">Lee más</a>
+                            {% if charla['description'] %}
+                              <a class="theme-btn btn-style-three" data-toggle="collapse" href="#{{collapse}}" role="button" aria-expanded="false" aria-controls="{{collapse}}">Lee más</a>
+                            {% endif %}
+
+                            {% if charla['youtube'] %}
+                              <div class="side-link">
+                                <a href="{{ charla['youtube'] }}"><i class="fa fa-youtube"></i> Vídeo</a>
+                              </div>
+                            {% endif %}
                           </div>
-                          {% endif %}
                           {% if 'Almuerzo' not in charla['title'] %}
                           <div class="photo-container">
                             {% set photos = charla['photo'].split(' ') %}
@@ -813,7 +819,7 @@
 
                   <p>Si eres una mujer y quieres aprender a hacer páginas web, tenemos buenas noticias para ti. ¡Vamos a hacer un taller para principiantes de una tarde de duración! </p>
 
-                  <p>Será el viernes <strong> 1 de Octubre de 16:00 a 20:00 </strong> a través de la plataforma <strong>Discord</strong>, durante el primer día de la conferencia nacional sobre Python más importante de España: PyConES, en su edición de 2021. </p>
+                  <p>Será el viernes <strong> 1 de Octubre de 16:00 a 20:00 </strong> a través de la plataforma <a href="https://discord.gg/rmGmAPRW6W">Discord</a>, durante el primer día de la conferencia nacional sobre Python más importante de España: PyConES, en su edición de 2021. </p>
 
                   <p>Creemos que la industria IT se beneficiará enormemente con la incorporación de más mujeres, por eso, queremos darte la oportunidad de aprender a programar y convertirte en una de nosotras: ¡mujeres programadoras!
 
