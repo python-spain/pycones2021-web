@@ -82,3 +82,7 @@ nav.main-menu ul.navigation li::marker {
 .btn-box.contact {
   width: auto;
 }
+
+#signup a:hover {
+  color: #31d84e;
+}
