@@ -737,8 +737,14 @@
                             {% endif %}
 
                             {% if charla['youtube'] %}
-                              <div class="side-link">
+                              <div class="side-link youtube-link">
                                 <a href="{{ charla['youtube'] }}"><i class="fa fa-youtube"></i> Vídeo</a>
+                              </div>
+                            {% endif %}
+
+                            {% if charla['discord'] %}
+                              <div class="side-link discord-link">
+                                <a href="{{ charla['discord'] }}"><i class="fab fa-discord"></i> Interacción</a>
                               </div>
                             {% endif %}
                           </div>

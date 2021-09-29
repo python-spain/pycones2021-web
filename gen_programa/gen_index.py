@@ -61,7 +61,7 @@ def get_dict(day):
     i = 0
 
     for _, row in agenda.iterrows():
-        name = photo = url = title = desc = social = bio = youtube = None
+        name = photo = url = title = desc = social = bio = youtube = discord = None
         row_day = row["day"]
 
         start = row["start"]
@@ -123,6 +123,7 @@ def get_dict(day):
                 bio = found["bio"].values[0]
                 photo = found["photo"].values[0]
                 youtube = found["youtube"].values[0]
+                discord = found["discord"].values[0]
             elif title.startswith("Taller"):
                 found = talleres.loc[
                     talleres["title"].str.strip() == title.replace("Taller: ", "")
@@ -148,6 +149,7 @@ def get_dict(day):
                 desc = found["description"].values[0]
                 photo = found["photo"].values[0]
                 youtube = found["youtube"].values[0]
+                discord = found["discord"].values[0]
             else:
                 found = charlas.loc[charlas["title"].str.strip() == title]
                 name = clean_entry(found["name"])
@@ -156,6 +158,7 @@ def get_dict(day):
                 bio = clean_entry(found["bio"])
                 desc = clean_entry(found["description"])
                 youtube = clean_entry(found["youtube"])
+                discord = clean_entry(found["discord"])
                 # We use relative, because the 'images' directory is not here.
 
                 photo = get_photos(name)
@@ -175,6 +178,7 @@ def get_dict(day):
                     ("A", "B")[bloque],
                     social,
                     youtube,
+                    discord,
                 ]
                 i += 1
 
@@ -206,6 +210,7 @@ if __name__ == "__main__":
         "block",
         "social",
         "youtube",
+        "discord",
     )
 
     conf = {

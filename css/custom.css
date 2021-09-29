@@ -38,6 +38,22 @@ nav.main-menu ul.navigation li::marker {
   font-size: 25px;
 }
 
+.btn-box {
+  width: 180px;
+}
+
+.shedule-block .btn-box a {
+  padding: 0;
+  line-height: 20px;
+  font-size: 15px;
+  display: block;
+  text-align: center;
+}
+
+.shedule-block .btn-box .btn-style-three {
+  padding: 15px;
+}
+
 .side-link {
   margin-top: 1rem;
 }
@@ -48,8 +64,17 @@ nav.main-menu ul.navigation li::marker {
 
 .btn-box .side-link a:hover {
   box-shadow: none;
+  color: #222222;
 }
 
 .inner-box .btn-box .side-link a {
   border: none;
+}
+
+.youtube-link a {
+  color: #f61500;
+}
+
+.discord-link a {
+  color: #6e85d3;
 }
