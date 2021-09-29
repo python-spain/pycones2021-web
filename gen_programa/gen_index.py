@@ -92,6 +92,7 @@ def get_dict(day):
                 desc = "Transmisión final"
                 photo = "images/pythonES_logo_simple.png"
                 youtube = "https://www.youtube.com/watch?v=kHekueaEWno"
+                discord = "https://discord.gg/jwGWyepPk7"
             elif title == "Asamblea Extraordinaria de Python España":
                 name = "Directiva Python España"
                 url = "https://es.python.org"
