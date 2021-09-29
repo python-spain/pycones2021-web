@@ -597,15 +597,18 @@
               <div class="content-box">
                 <span class="title">Charlas</span>
                 <div class="text">
-                  No es necesario ninguna inscripción ni registro para atender a las charlas. Próximamente avisaremos de la URL en la que podrás seguir el evento, así como el servidor de Discord que permitirá la comunicación con ponentes y resto de participantes.
+                  <p>No es necesario ninguna inscripción ni registro para atender a las charlas. Podrás seguir el evento en directo a través del <a href="https://youtube.com/c/PythonEspañaOficial/videos?view=2&live_view=502"><i class="fa fa-youtube"></i> canal de YouTube de Python España</a>.</p>
+                  <p>La interacción con los y las ponentes de las charlas y keynotes y el resto de participantes será a través de <a href="https://discord.gg/rmGmAPRW6W"><i class="fab fa-discord"></i> este servidor de Discord</a>.</p>
+
                 </div>
               </div>
 
               <div class="content-box">
                 <span class="title">Talleres</span>
                 <div class="text">
-                  ¿Quieres asistir a alguno de los talleres? En ese caso, por favor, rellena este
-                  <a href="https://forms.gle/p8r2bWZHfF8V7pHB9">formulario</a> para que podamos contar contigo! :)
+                  <p>¿Quieres asistir a alguno de los talleres? En ese caso, por favor, rellena este
+                  <a href="https://forms.gle/p8r2bWZHfF8V7pHB9">formulario</a> para que podamos contar contigo! :)</p>
+                  <p>Todos los talleres tendrán lugar en el <a href="https://discord.gg/rmGmAPRW6W">servidor de Discord</a>.</p>
                 </div>
               </div>
 
@@ -642,7 +645,7 @@
                         <div class="text">La PyConES es la conferencia más grande de la comunidad Python en España, donde se dan cita profesionales y entusiastas del lenguaje para difundir su experiencia y conocimientos en varias sesiones de charlas y talleres.
                           Este año se realizará de forma <strong>online</strong> durante los días <strong>2 y 3 de octubre de 2021</strong>.
                         </div>
-                        <div class="btn-box">
+                        <div class="btn-box contact">
                             <a href="#contact" class="theme-btn btn-style-one">Contacto <span class="flaticon-arrow"></span></a>
                         </div>
                     </div>
@@ -728,11 +731,23 @@
                           talk
                         {% endif %}
                         ">
-                          {% if charla['description'] %}
                           <div class="btn-box">
-                            <a class="theme-btn btn-style-three" data-toggle="collapse" href="#{{collapse}}" role="button" aria-expanded="false" aria-controls="{{collapse}}">Lee más</a>
+                            {% if charla['description'] %}
+                              <a class="theme-btn btn-style-three" data-toggle="collapse" href="#{{collapse}}" role="button" aria-expanded="false" aria-controls="{{collapse}}">Lee más</a>
+                            {% endif %}
+
+                            {% if charla['youtube'] %}
+                              <div class="side-link youtube-link">
+                                <a href="{{ charla['youtube'] }}"><i class="fa fa-youtube"></i> Vídeo</a>
+                              </div>
+                            {% endif %}
+
+                            {% if charla['discord'] %}
+                              <div class="side-link discord-link">
+                                <a href="{{ charla['discord'] }}"><i class="fab fa-discord"></i> Interacción</a>
+                              </div>
+                            {% endif %}
                           </div>
-                          {% endif %}
                           {% if 'Almuerzo' not in charla['title'] %}
                           <div class="photo-container">
                             {% set photos = charla['photo'].split(' ') %}
@@ -810,7 +825,7 @@
 
                   <p>Si eres una mujer y quieres aprender a hacer páginas web, tenemos buenas noticias para ti. ¡Vamos a hacer un taller para principiantes de una tarde de duración! </p>
 
-                  <p>Será el viernes <strong> 1 de Octubre de 16:00 a 20:00 </strong> a través de la plataforma <strong>Discord</strong>, durante el primer día de la conferencia nacional sobre Python más importante de España: PyConES, en su edición de 2021. </p>
+                  <p>Será el viernes <strong> 1 de Octubre de 16:00 a 20:00 </strong> a través de la plataforma <a href="https://discord.gg/rmGmAPRW6W">Discord</a>, durante el primer día de la conferencia nacional sobre Python más importante de España: PyConES, en su edición de 2021. </p>
 
                   <p>Creemos que la industria IT se beneficiará enormemente con la incorporación de más mujeres, por eso, queremos darte la oportunidad de aprender a programar y convertirte en una de nosotras: ¡mujeres programadoras!
 

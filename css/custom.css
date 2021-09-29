@@ -33,3 +33,52 @@ nav.main-menu ul.navigation li::marker {
 .shedule-tabs .tab-buttons li.tab-btn:hover {
   background-color: #ffc600;
 }
+
+.call-to-action .title {
+  font-size: 25px;
+}
+
+.btn-box {
+  width: 180px;
+}
+
+.shedule-block .btn-box a {
+  padding: 0;
+  line-height: 20px;
+  font-size: 15px;
+  display: block;
+  text-align: center;
+}
+
+.shedule-block .btn-box .btn-style-three {
+  padding: 15px;
+}
+
+.side-link {
+  margin-top: 1rem;
+}
+
+.btn-box .side-link a {
+  font-size: 16px;
+}
+
+.btn-box .side-link a:hover {
+  box-shadow: none;
+  color: #222222;
+}
+
+.inner-box .btn-box .side-link a {
+  border: none;
+}
+
+.youtube-link a {
+  color: #f61500;
+}
+
+.discord-link a {
+  color: #6e85d3;
+}
+
+.btn-box.contact {
+  width: auto;
+}

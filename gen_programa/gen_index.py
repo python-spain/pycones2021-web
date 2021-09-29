@@ -61,7 +61,7 @@ def get_dict(day):
     i = 0
 
     for _, row in agenda.iterrows():
-        name = photo = url = title = desc = social = bio = None
+        name = photo = url = title = desc = social = bio = youtube = discord = None
         row_day = row["day"]
 
         start = row["start"]
@@ -72,16 +72,27 @@ def get_dict(day):
 
         for bloque, title in enumerate([talk_a, talk_b]):
 
-            if title == "Apertura de la jornada":
+            if title == "Apertura de la jornada Sábado":
+                title = title.replace(' Sábado', '')
                 name = "Organización PyConES"
                 url = "https://es.python.org"
                 desc = "Transmisión inicial"
                 photo = "images/pythonES_logo_simple.png"
+                youtube = "https://www.youtube.com/watch?v=MOOzo8SoQhg"
+            elif title == "Apertura de la jornada Domingo":
+                title = title.replace(' Domingo', '')
+                name = "Organización PyConES"
+                url = "https://es.python.org"
+                desc = "Transmisión inicial"
+                photo = "images/pythonES_logo_simple.png"
+                youtube = "https://www.youtube.com/watch?v=AEzAK7hYjJM"
             elif title == "Sorteos y Clausura":
                 name = "Organización PyConES"
                 url = "https://es.python.org"
                 desc = "Transmisión final"
                 photo = "images/pythonES_logo_simple.png"
+                youtube = "https://www.youtube.com/watch?v=kHekueaEWno"
+                discord = "https://discord.gg/jwGWyepPk7"
             elif title == "Asamblea Extraordinaria de Python España":
                 name = "Directiva Python España"
                 url = "https://es.python.org"
@@ -112,6 +123,8 @@ def get_dict(day):
                 social = found["social"].values[0]
                 bio = found["bio"].values[0]
                 photo = found["photo"].values[0]
+                youtube = found["youtube"].values[0]
+                discord = found["discord"].values[0]
             elif title.startswith("Taller"):
                 found = talleres.loc[
                     talleres["title"].str.strip() == title.replace("Taller: ", "")
@@ -136,6 +149,8 @@ def get_dict(day):
                 social = found["social"].values[0]
                 desc = found["description"].values[0]
                 photo = found["photo"].values[0]
+                youtube = found["youtube"].values[0]
+                discord = found["discord"].values[0]
             else:
                 found = charlas.loc[charlas["title"].str.strip() == title]
                 name = clean_entry(found["name"])
@@ -143,6 +158,8 @@ def get_dict(day):
                 social = clean_entry(found["social"])
                 bio = clean_entry(found["bio"])
                 desc = clean_entry(found["description"])
+                youtube = clean_entry(found["youtube"])
+                discord = clean_entry(found["discord"])
                 # We use relative, because the 'images' directory is not here.
 
                 photo = get_photos(name)
@@ -161,6 +178,8 @@ def get_dict(day):
                     bio,
                     ("A", "B")[bloque],
                     social,
+                    youtube,
+                    discord,
                 ]
                 i += 1
 
@@ -191,6 +210,8 @@ if __name__ == "__main__":
         "bio",
         "block",
         "social",
+        "youtube",
+        "discord",
     )
 
     conf = {
