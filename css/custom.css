@@ -78,3 +78,7 @@ nav.main-menu ul.navigation li::marker {
 .discord-link a {
   color: #6e85d3;
 }
+
+.btn-box.contact {
+  width: auto;
+}
