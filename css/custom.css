@@ -33,3 +33,7 @@ nav.main-menu ul.navigation li::marker {
 .shedule-tabs .tab-buttons li.tab-btn:hover {
   background-color: #ffc600;
 }
+
+.call-to-action .title {
+  font-size: 25px;
+}
