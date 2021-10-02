@@ -83,6 +83,10 @@ nav.main-menu ul.navigation li::marker {
   color: #155e31;
 }
 
+.repo-link a {
+  color: #6f2a8a;
+}
+
 .btn-box.contact {
   width: auto;
 }
