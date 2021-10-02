@@ -61,7 +61,7 @@ def get_dict(day):
     i = 0
 
     for _, row in agenda.iterrows():
-        name = photo = url = title = desc = social = bio = youtube = discord = None
+        name = photo = url = title = desc = social = bio = youtube = discord = slides = None
         row_day = row["day"]
 
         start = row["start"]
@@ -160,6 +160,7 @@ def get_dict(day):
                 desc = clean_entry(found["description"])
                 youtube = clean_entry(found["youtube"])
                 discord = clean_entry(found["discord"])
+                slides = clean_entry(found["slides"])
                 # We use relative, because the 'images' directory is not here.
 
                 photo = get_photos(name)
@@ -180,6 +181,7 @@ def get_dict(day):
                     social,
                     youtube,
                     discord,
+                    slides,
                 ]
                 i += 1
 
@@ -212,6 +214,7 @@ if __name__ == "__main__":
         "social",
         "youtube",
         "discord",
+        "slides",
     )
 
     conf = {
