@@ -729,6 +729,12 @@
                                 <a href="{{ charla['discord'] }}"><i class="fab fa-discord"></i> Interacción</a>
                               </div>
                             {% endif %}
+
+                            {% if charla['slides'] %}
+                              <div class="side-link slides-link">
+                                <a href="{{ charla['slides'] }}"><i class="fab fa-slideshare"></i> Diapositivas</a>
+                              </div>
+                            {% endif %}
                           </div>
                           {% if 'Almuerzo' not in charla['title'] %}
                           <div class="photo-container">
