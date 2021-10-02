@@ -137,6 +137,8 @@ def get_dict(day):
                 desc = clean_entry(found["description"])
                 bio = clean_entry(found["bio"])
                 photo = get_photos(name)
+                slides = clean_entry(found["slides"])
+                repo = clean_entry(found["repo"])
             # TODO: Agregar más información
             elif title.startswith("Sponsor"):
                 # Hack to avoid empty sponsors
