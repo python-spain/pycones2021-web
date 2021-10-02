@@ -735,6 +735,13 @@
                                 <a href="{{ charla['slides'] }}"><i class="fab fa-slideshare"></i> Diapositivas</a>
                               </div>
                             {% endif %}
+
+                            {% if charla['repo'] %}
+                              <div class="side-link repo-link">
+                                <a href="{{ charla['repo'] }}"><i class="fab fa-github"></i> Repo</a>
+                              </div>
+                            {% endif %}
+
                           </div>
                           {% if 'Almuerzo' not in charla['title'] %}
                           <div class="photo-container">
